@@ -78,4 +78,20 @@
 	
 	4. 数据库表结构（src/main/resources/repository.json），定义了数据库表结构，用于生成建表语句以及持久化时的校验
 	部署描述符（src/main/webapp/WEB-INF/web.xml），定义了框架启动 Servlet 监听器、请求分发器等
+	
+	5. 部署描述符（src/main/webapp/WEB-INF/web.xml），定义了框架启动 Servlet 监听器、请求分发器等
 
+# 请求处理-客户端的http请求会经过Latke分发到应用定义的请求处理器上（标注有@RequestProcessor的类）
+
+	1. 一个请求处理器可以包含多个请求处理方法（标注@RequestProcessing方法）类似于springmvc的简要实现
+	2. 通过使用不同的响应渲染器可以生成不同类型的响应，例如 HTML、Rss、PNG 等。
+
+# 通过@Inject注入需要的服务
+
+# 通过@Service标注标识该类为一个服务
+
+# 通过@Transaction标识该方法是执行在一个事务中，事务隔离级别为READ_COMMITTED
+
+# Dao 数据连接层
+	1. @Reponsitory标注了该类是一个DAO
+	2. DAO需要继承AbstractRepository
