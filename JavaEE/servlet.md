@@ -1,3 +1,7 @@
+# 什么是servlet，什么是servlet容器，其功能是什么，解决了什么问题？
+	浏览器在点击连接和按钮时产生的消息不是发送给servlet的，而是发送给web容器，web容器接收消息之后
+	转交给我们编写的servlet处理，web容器和servlet之间通过定义接口进行规范，我们只要定义的servlet符合接口规范，就可以被容器识别和调用
+
 # servlet 容器
 	servlet容器如Tomcat分为四个等级，真正管理 Servlet 的容器是 Context 容器，一个 Context 对应一个 Web 工程，在 Tomcat 的配置文件中可以很容易发现这一点
 
@@ -34,3 +38,4 @@
 	}
 
 # 接下去是执行tomcat中的start方法
+	在tomcat中start方法根据其构建模型，从大的容器开始进行启动
